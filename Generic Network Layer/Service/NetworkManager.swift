@@ -45,14 +45,17 @@ class NetworkManager {
     }
     
     func getUser(completion: @escaping (Result<[User], Error>) -> Void) {
-        
         let endPoint = Endpoint.getUsers
         request(endpoint: endPoint, completion: completion)
     }
     
-    func getComments(completion: @escaping (Result<[Comment], Error>) -> Void) {
-        
-        let endPoint = Endpoint.comments
+    func getComments(postId: String, completion: @escaping (Result<[Comment], Error>) -> Void) {
+        let endPoint = Endpoint.comments(postId: postId)
+        request(endpoint: endPoint, completion: completion)
+    }
+    
+    func posts(title: String, body: String, userId: Int, completion: @escaping (Result<Post, Error>) -> Void) {
+        let endPoint = Endpoint.posts(title: title, body: body, userId: userId)
         request(endpoint: endPoint, completion: completion)
     }
 }

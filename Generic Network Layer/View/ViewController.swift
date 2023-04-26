@@ -13,24 +13,14 @@ class ViewController: UIViewController {
     private var users: [String] = []
     private var emails: [String] = []
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
         
-        NetworkManager.shared.getComments { [weak self] result in
-            switch result {
-            case .success(let success):
-                for email in success {
-                    DispatchQueue.main.async {
-                        self?.emails.append(email.email!)
-                        self?.detailTableView.reloadData()
-                    }
-                }
-            case .failure(let failure):
-                print(failure)
-            }
-        }
+//        getComments(id: 2)
+        posts(title: "DENeEME", body: "DENEME", userId: 10)
     }
     
     private func configureTableView() {
@@ -41,6 +31,35 @@ class ViewController: UIViewController {
         detailTableView.backgroundColor = .systemBackground
         detailTableView.rowHeight = 40
         detailTableView.layer.cornerRadius = 14
+    }
+    
+//    fileprivate func getComments(id: Int) {
+//        NetworkManager.shared.getComments(postId: String(id)) { [weak self] result in
+//            switch result {
+//            case .success(let success):
+//                for email in success {
+//                    DispatchQueue.main.async {
+//                        self?.emails.append(email.email!)
+//                        self?.detailTableView.reloadData()
+//                    }
+//                }
+//            case .failure(let failure):
+//                print(failure)
+//            }
+//        }
+//    }
+    
+    fileprivate func posts(title: String, body: String, userId: Int) {
+        NetworkManager.shared.posts(title: title, body: body, userId: userId) { [weak self] result in
+            switch result {
+            case .success(let success):
+                print(success.body)
+                print(success.title)
+                print(success.userId)
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
     }
 }
 

@@ -16,6 +16,7 @@
 		011BA7CA29E4484A00426C22 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BA7C929E4484A00426C22 /* Endpoint.swift */; };
 		011BA7CD29E44C7300426C22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BA7CC29E44C7300426C22 /* User.swift */; };
 		011BA7CF29E4525700426C22 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BA7CE29E4525700426C22 /* Comment.swift */; };
+		0183469A29F99EB00047FECB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183469929F99EB00047FECB /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		011BA7C929E4484A00426C22 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		011BA7CC29E44C7300426C22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		011BA7CE29E4525700426C22 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0183469929F99EB00047FECB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				011BA7CC29E44C7300426C22 /* User.swift */,
 				011BA7CE29E4525700426C22 /* Comment.swift */,
+				0183469929F99EB00047FECB /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				011BA7C829E4480000426C22 /* NetworkManager.swift in Sources */,
 				011BA7B629E4455E00426C22 /* ViewController.swift in Sources */,
 				011BA7CD29E44C7300426C22 /* User.swift in Sources */,
+				0183469A29F99EB00047FECB /* Post.swift in Sources */,
 				011BA7CF29E4525700426C22 /* Comment.swift in Sources */,
 				011BA7B229E4455E00426C22 /* AppDelegate.swift in Sources */,
 				011BA7B429E4455E00426C22 /* SceneDelegate.swift in Sources */,
